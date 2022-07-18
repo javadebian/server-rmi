@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+  <persistence-unit name="DSCampeonato" transaction-type="JTA">
+      <class>com.isc.sd.model.Categoria</class>
+      <class>com.isc.sd.model.Equipo</class>
+      <class>com.isc.sd.model.Fixture</class>
+      <class>com.isc.sd.model.Jugador</class>
+      <class>com.isc.sd.model.Torneo</class>
+      <class>com.isc.sd.model.Usuario</class>
+      <properties>
+          <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+          <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dbCampeonato"/>
+          <property name="javax.persistence.jdbc.user" value="root"/>
+          <property name="javax.persistence.jdbc.password" value="mysql2021"/>
+          <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+      </properties>
+  </persistence-unit>
+</persistence>
